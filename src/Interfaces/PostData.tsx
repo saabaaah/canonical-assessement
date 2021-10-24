@@ -1,24 +1,20 @@
-interface PostAuthor{
+export interface PostAuthor{
     id:number, 
     link: string,
     name: string,
     url: string,
 }
 
-interface PostTitle{
+export interface PostTitle{
     rendered: string
 }
 
-interface PostGroup{
-    id:number,
-    name:string,
-    link:string,
-}
 
-interface PostCategory{
+export interface WPTerm{
     id:number,
     name:string,
     link:string,
+    taxonomy:string,
 }
 
 interface PostData {
@@ -27,9 +23,9 @@ interface PostData {
     link: string,
     features_media: string,
     title: PostTitle,
-    authors: PostAuthor[],
-    groups: PostGroup[],
-    categories: PostCategory[]
+    authors: number[],
+    groups: number[],
+    categories: number[],
 }
 
 export default PostData;
