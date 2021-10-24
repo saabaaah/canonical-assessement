@@ -11,7 +11,7 @@ function PostsList() {
     const [jsonData, setJsonData] = useState('')
     const [posts, setPosts] = useState<any>([])
 
-    // fetch our data, 
+    // fetch the posts data, 
     const fetchData = () => {
         axios.get(`${URL}`)
         .then(({data}:any) => { return data})
@@ -25,9 +25,10 @@ function PostsList() {
         }
         )
     }
+
     // fetch on load data 
     useEffect(() => {
-        fetchData()
+        fetchData();
     }, [])
     
     return (
