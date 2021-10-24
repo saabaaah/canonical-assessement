@@ -1,9 +1,8 @@
+import PostsListComponent from "./Components/PostsListComponent";
 
 function App() {
   return (
-    <div className="App">
-      Hello Canonical World!
-    </div>
+    <PostsListComponent></PostsListComponent>
   );
 }
 
