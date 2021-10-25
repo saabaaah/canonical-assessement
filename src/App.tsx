@@ -2,7 +2,12 @@ import PostsList from "./Components/PostsList";
 
 function App() {
   return (
-    <PostsList></PostsList>
+    <div className="l-application">
+      <h1></h1>
+      <main className="l-main">
+        <PostsList/>
+      </main>
+    </div>
   );
 }
 

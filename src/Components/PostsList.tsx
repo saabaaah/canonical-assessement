@@ -29,12 +29,13 @@ function PostsList() {
     }, [])
     
     return (
-        <div>
-            <h1>Posts List </h1>
-            {posts.map((post:PostData, id:number) => 
-                <Post key={id} postData={post}/>
-            )}
-        </div>
+        // <section id="posts" className="m-posts">
+            <div className="row u-equal-height u-clearfix">
+                {posts.map((post:PostData, id:number) => 
+                    <Post key={id} postData={post}/>
+                )}
+            </div>
+        // </section>
     )
 }
 

@@ -37,17 +37,38 @@ function Post(props:any) {
         setData();
     })
     return (
-        <div>
-            <p>Link : {postData.link} </p>
-            <p>group : {(group !== undefined) ? group.name: "Unknown" } </p>
-            <p>featured_media : {postData.featured_media} </p>
-            <p>title : {postData.title.rendered} </p>
-            <p>authors : { (author !== undefined) ? author.name: "Unknown" } </p>
-            <p>date : {formatedDate} </p>
-            <p>categories : {(category !== undefined) ? category.name: "Unknown" } </p>
+            <div className="col-4 col-small-12 col-medium-4 col-12 u-equal-height m-post">
+                <div className="p-card">
+{/* 
+                <p>Link : {postData.link} </p>
+                <p>group : {(group !== undefined) ? group.name: "Unknown" } </p>
+                <p>authors : { (author !== undefined) ? author.name: "Unknown" } </p>
+                <p>date : {formatedDate} </p>
+                <p>categories : {(category !== undefined) ? category.name: "Unknown" } </p>
+                 */}
+                    <header>
+                        <h5 className="p-muted-heading">
+                            {(group !== undefined) ? group.name: "Unknown Group" }
+                        </h5>
+                    </header>
+                    
+                    <div className="p-card__content m-border-top-dotted">
+                            <img className="p-card__image" src={postData.featured_media}/>
 
-            <hr/>
+                            <h4><a href={ postData.link }>{ postData.title.rendered }</a></h4>
+                            <p>By  
+                            <a href={ (author !== undefined) ? author.link: "Unknown" }> 
+                                &nbsp;{ (author !== undefined) ? author.name: "Unknown" }&nbsp;
+                            </a>
+                            on {formatedDate}</p>
+                    </div>
+                    <footer className="p-card__footer m-border-top-dotted">
+                        {(category !== undefined) ? category.name.slice(0, category.name.length-1): "Unknown" }
+                    </footer>
+            </div>
+            
         </div>
     )
 }
+
 export default Post
