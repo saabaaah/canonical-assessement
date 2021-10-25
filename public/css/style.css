@@ -12,6 +12,7 @@
     border-bottom: none;
     border-right: none;
     border-left: none;
+    margin-bottom: 2rem;
 }
 /* Edit post's card to have a flex flow to organize its inside items */
 .m-post > .p-card{
