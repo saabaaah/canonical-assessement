@@ -1,0 +1,43 @@
+
+/* create a top dotted border */
+.m-border-top-dotted{
+    border-top: dotted 1px #ddd;
+}
+
+/* edit the post div properties to have top colored border, box shadow...  */
+.m-post{
+    box-shadow: 0px 0px 7px #a7a7a7;
+    border-top: solid 3px hsl(311deg 20% 57%);
+    border-radius: 2px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+/* Edit post's card to have a flex flow to organize its inside items */
+.m-post > .p-card{
+    border : none;
+    flex-flow: column;
+    display: flex;
+    margin-bottom: 0rem;
+
+}
+
+/* add a small padding to the card content class & make 
+ * it take the main content of the post card  */
+.m-post > .p-card > .p-card__content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    flex: 1 1 auto;
+}
+
+/* make the post title take the main space */
+.m-post > .p-card > .p-card__content > h4 {
+    flex: 1 1 auto;
+}
+
+/* add a padding to the footer */
+.m-post > .p-card > footer {
+    padding: 0.5rem 0.5rem 0rem 0.5rem;;
+}
